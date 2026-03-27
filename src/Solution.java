@@ -1,23 +1,25 @@
-import java.util.LinkedList;
-import java.util.ListIterator;
-import java.util.Scanner;
+class PriorityThread extends Thread 
+{
+    public void run() 
+    {
+        // empty run method
+    }
+}
 
-public class Solution {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        // TODO: Read the integer N
-        
-        // TODO: Create a LinkedList of Integers
-        
-        // TODO: Read N integers and add them to the LinkedList
-        
-        // TODO: Create a ListIterator for the LinkedList
-        
-        // TODO: Traverse the list in the forward direction and print the elements
-        
-        // TODO: Traverse the list in the backward direction and print the elements
-        
-        
+public class ThreadPriorityDemo 
+{
+    public static void main(String[] args) 
+    {   
+        PriorityThread t1 = new PriorityThread();
+        PriorityThread t2 = new PriorityThread();
+        PriorityThread t3 = new PriorityThread();
+
+        t1.setPriority(Thread.MIN_PRIORITY);
+        t2.setPriority(Thread.NORM_PRIORITY);
+        t3.setPriority(Thread.MAX_PRIORITY);
+
+        System.out.println("Thread 1 Priority: " + t1.getPriority());
+        System.out.println("Thread 2 Priority: " + t2.getPriority());
+        System.out.println("Thread 3 Priority: " + t3.getPriority());
     }
 }
